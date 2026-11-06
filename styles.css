@@ -1,0 +1,87 @@
+/* ==========================================================================
+   AgriGrow Nakhon Phanom — GIS Smart Farm Stylesheet (css/styles.css)
+   แยกส่วนมาจากระบบประเมินและติดตามการเติบโตพืชผลจังหวัดนครพนม
+   ========================================================================== */
+:root {
+            --theme-primary: #059669;
+            --theme-primary-dark: #047857;
+            --theme-secondary: #10b981;
+            --theme-light: #ecfdf5;
+            --theme-border: #a7f3d0;
+            --theme-header-from: #064e3b;
+            --theme-header-to: #0f172a;
+            --theme-bg: #f1f5f9;
+            --theme-shadow: rgba(5, 150, 105, 0.28);
+        }
+        body {
+            font-family: 'Sarabun', 'Inter', sans-serif;
+            background-color: var(--theme-bg);
+            color: #0f172a;
+        }
+        .theme-header {
+            background: linear-gradient(135deg, var(--theme-header-from) 0%, var(--theme-header-to) 100%);
+        }
+        .theme-btn-primary {
+            background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%);
+            color: #ffffff;
+            box-shadow: 0 6px 16px -3px var(--theme-shadow);
+        }
+        .theme-btn-primary:hover {
+            filter: brightness(1.07);
+        }
+        .theme-badge {
+            background-color: var(--theme-light);
+            border-color: var(--theme-border);
+            color: var(--theme-primary-dark);
+        }
+        .theme-step-badge {
+            background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+            color: #ffffff;
+        }
+        .score-btn {
+            transition: all 0.18s ease;
+        }
+        .score-btn.active {
+            background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%);
+            color: #ffffff;
+            border-color: var(--theme-primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 14px -3px var(--theme-shadow);
+        }
+        .tab-btn {
+            transition: all 0.2s ease;
+        }
+        .tab-btn.active {
+            background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 14px var(--theme-shadow);
+        }
+        .swatch-btn {
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .swatch-btn.active {
+            transform: scale(1.2);
+            box-shadow: 0 0 0 2px #0f172a, 0 0 0 4px var(--theme-primary);
+        }
+        .stage-dot.done {
+            background-color: var(--theme-primary);
+            color: #ffffff;
+            border-color: var(--theme-primary);
+        }
+        .custom-crop-pin {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 9999px;
+            background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%);
+            border: 3px solid #ffffff;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+            font-size: 18px;
+            color: #ffffff;
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: #ffffff; }
+        }
